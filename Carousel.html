@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Screen Carousel</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #carousel-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            min-height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="carousel-container">
+        <div id="carousel">
+            <div class="carousel-slide" style="background-image: url('https://www.dochipo.com/wp-content/uploads/2021/10/YouTube-Thumbnail-_-Education.png');"></div>
+            <div class="carousel-slide" style="background-image: url('https://www.dochipo.com/wp-content/uploads/2021/10/YouTube-Thumbnail-_-Education.png');"></div>
+            <div class="carousel-slide" style="background-image: url('https://www.dochipo.com/wp-content/uploads/2021/10/YouTube-Thumbnail-_-Education.png');"></div>
+        </div>
+    </div>
+
+    <script>
+        const carousel = document.getElementById('carousel');
+        const slides = document.querySelectorAll('.carousel-slide');
+        let currentSlide = 0;
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            const translateX = -currentSlide * 100;
+            carousel.style.transform = `translateX(${translateX}%)`;
+        }
+
+        setInterval(nextSlide, 5000); // Auto-advance every 5 seconds
+
+        window.addEventListener('resize', updateCarousel);
+        updateCarousel(); // Initial setup
+    </script>
+</body>
+</html>
