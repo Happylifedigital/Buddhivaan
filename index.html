@@ -3,57 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full-Screen Carousel</title>
+    <title>Horizontal Slider</title>
     <style>
         body {
             margin: 0;
-            padding: 0;
             overflow: hidden;
-            background-color: #000;
         }
 
-        #carousel-container {
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-            position: relative;
-        }
-
-        #carousel {
+        #slider-container {
             display: flex;
-            transition: transform 1s ease-in-out;
+            overflow-x: scroll;
+            scroll-behavior: smooth;
+            width: 100vw;
+            height: 100vh;
         }
 
-        .carousel-slide {
-            flex: 0 0 100%;
-            height: 100vh;
-            background-size: cover;
-            background-position: center;
+        .card {
+            flex: 0 0 100vh; /* Square cards: Set the height equal to the viewport height */
+            width: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #2196F3;
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .card:not(:first-child) {
+            margin-left: 1rem;
+        }
+
+        .card:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
 <body>
-    <div id="carousel-container">
-        <div id="carousel">
-            <!-- You can change the image URLs below -->
-            <div class="carousel-slide" style="background-image: url('image1.jpg');"></div>
-            <div class="carousel-slide" style="background-image: url('image2.jpg');"></div>
-            <div class="carousel-slide" style="background-image: url('image3.jpg');"></div>
-            <div class="carousel-slide" style="background-image: url('image4.jpg');"></div>
-        </div>
+    <div id="slider-container">
+        <div class="card">Card 1</div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+        <div class="card">Card 4</div>
+        <div class="card">Card 5</div>
+        <div class="card">Card 6</div>
+        <div class="card">Card 7</div>
+        <div class="card">Card 8</div>
+        <div class="card">Card 9</div>
+        <div class="card">Card 10</div>
     </div>
 
     <script>
-        const slides = document.querySelectorAll('.carousel-slide');
-        let currentSlide = 0;
-
-        function nextSlide() {
-            slides[currentSlide].style.opacity = '0';
-            currentSlide = (currentSlide + 1) % slides.length;
-            slides[currentSlide].style.opacity = '1';
-        }
-
-        setInterval(nextSlide, 5000); // Change slide every 5 seconds
+        const cards = document.querySelectorAll('.card');
+        cards.forEach((card, index) => {
+            card.addEventListener('click', () => {
+                // Add your animation or action here when a card is clicked.
+                alert(`Card ${index + 1} clicked!`);
+            });
+        });
     </script>
 </body>
 </html>
