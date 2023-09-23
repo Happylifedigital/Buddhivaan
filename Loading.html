@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Animation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .loading-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .loading-box {
+            width: 100%;
+            max-width: 600px; /* Adjust the maximum width as needed */
+            height: 150px; /* Adjust the height as needed */
+            background-color: #ddd;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            animation: pulse 1.5s infinite;
+            margin: 10px 0; /* Adjust the margin between elements as needed */
+        }
+
+        .loading-box-m {
+            width: 100%;
+            max-width: 600px; /* Adjust the maximum width as needed */
+            height: 60px; /* Adjust the height as needed */
+            background-color: #ddd;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            animation: pulse 1.5s infinite;
+            margin: 10px 0; /* Adjust the margin between elements as needed */
+        }
+
+        .square-box-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 600px;
+            margin: 10px 0;
+        }
+
+        .square-box {
+            flex: 0 1 calc(33% - 10px); /* 4 boxes with 10px margin in between */
+            height: 100px; /* Adjust the height as needed */
+            background-color: #ddd;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            animation: pulse 1.5s infinite;
+        }
+
+        .loading-text {
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #b8b8b8;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 0.6;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.6;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="loading-container">
+        <div class="loading-text">Buddhivaan</div>
+        <div class="loading-box"></div>
+        <div class="loading-box-m"></div>
+        <div class="loading-box-m"></div>
+        <div class="square-box-container">
+            <div class="square-box"></div>
+            <div class="square-box"></div>
+            <div class="square-box"></div>
+  
+        </div>
+        <div class="loading-box-m"></div>
+        <div class="square-box-container">
+            <div class="square-box"></div>
+            <div class="square-box"></div>
+            <div class="square-box"></div>
+
+        </div>
+    </div>
+</body>
+</html>
