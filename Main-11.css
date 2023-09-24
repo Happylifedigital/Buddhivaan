@@ -1,0 +1,153 @@
+body {
+    overflow-x: hidden;
+  }
+  
+  .horizontal-rectangle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(0, 0%, 100%); /* Set the background color as needed */
+    height: 40px; /* Set the height of the container as needed */
+    padding: 5px; /* Add padding as needed */
+  }
+  
+  .rounded-button {
+    border: none;
+    border-radius: 15px;
+    padding: 6px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Added box-shadow transition */
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+   
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Added box-shadow for 3D effect */
+  }
+  
+  .left-button {
+    margin-left: 15px;
+    background-image: linear-gradient(to bottom, rgb(0, 74, 233), rgb(66, 0, 128));
+  }
+  
+  .right-button {
+    background-color: gray;
+    margin-right: 15px;
+    box-shadow: none; /* Remove box-shadow for the right button */
+  }
+  
+  .rounded-button:hover {
+    background-image: linear-gradient(to bottom, #020f1b, #07040e); /* Darken the gradient on hover */
+    transform: scale(1.05);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Add a more pronounced box-shadow on hover */
+  }
+  
+  .section {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+  }
+  
+  
+  
+  
+  .button-card {
+    flex: 1;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    color: white;
+  
+    font-weight: bold;
+    padding: 10px;
+    height: 50px; /* Change the height to your desired value */
+  }
+  
+  
+  .left-button-card {
+    background: linear-gradient(to bottom, #0078d4, #011968);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  
+  .right-button-card {
+    background: linear-gradient(to top, #fa0000, #ffae00);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    margin-left: 20px; 
+    margin-right: 20px;
+  }
+  
+  .button-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .bcard-content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff; /* Change the font color to your desired color */
+  /* Change the font size to your desired size */
+    font-family: 'Mukta', sans-serif; 
+    font-size: 50px;
+  }
+  .button-card .bcard-content p {
+    font-size: 20px; /* Adjust the font size as needed */
+  }
+  
+  /* Add media queries to adjust button sizes for different screen widths */
+  @media (max-width: 768px) {
+    .button-card {
+  
+        padding: 8px;
+    }
+  }
+  
+
+  .container {
+    display: flex;
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Hide vertical scrolling */
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+
+  .card {
+    flex: 0 0 60%; /* Adjust the width as needed for the 16:9 ratio */
+    margin: 10px;
+    scroll-snap-align: start;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out; /* Animation on click */
+  }
+  
+
+  .card:hover {
+    transform: scale(1.05); /* Increase size on hover */
+  }
+  
+  .card-image {
+    background-size: cover;
+    background-position: center;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  }
+  
+  
+  
+  .card-content {
+    font-weight: bold; /* Make the text bold */
+    font-size: 14px; /* Adjust the font size as needed */
+    margin: 0; /* Remove any default margin for paragraphs */
+    padding: 5px; /
+  }
