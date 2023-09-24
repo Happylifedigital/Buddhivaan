@@ -1,5 +1,41 @@
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="en"><head>
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <style>
+      /* Add your custom styles for rounded cards here */
+      .rounded-card {
+          border-radius: 12px;
+          background-color: #fff; /* Background color for the card */
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for the card */
+          transition: transform 0.5s ease-in-out; /* Transition for the rotation */
+          margin: 10px; /* Add margin to create space between cards */
+      }
+  
+      .rounded-card:hover {
+          transform: scale(0.95); /* Scale down on hover */
+      }
+  
+      .rounded-card img {
+          border-radius: 12px; /* Rounded corners for the image */
+          max-width: 100%; /* Ensure the image doesn't overflow the card */
+          height: auto;
+      }
+  
+      /* Add custom style for 3D effect on click */
+      .rounded-card.active {
+          transform: scale(0.95);
+      }
+  
+      /* Add margin to the container */
+      .carousel-container {
+          margin: 0 20px; /* Adjust margin as needed */
+      }
+  </style>
+  
+
+
   <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,64 +70,45 @@
     <meta property="og:type" content="website">
   <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
   <body data-path-to-root="/" class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-6a6f"><div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-sheet-1">
-        <p class="u-text u-text-default u-text-1" autocomplete="off">Buddhivaan</p>
+ 
+    
+ 
+    <p class="u-text u-text-default u-text-1" autocomplete="off">Buddhivaan</p>
       </div></header>
-    <section class="u-clearfix u-section-1" id="sec-42b2">
-      <div class="u-clearfix u-sheet u-valign-middle-xs u-sheet-1">
-        <div class="u-carousel u-expanded-width u-gallery u-gallery-slider u-layout-carousel u-lightbox u-no-transition u-show-text-on-hover u-gallery-1" data-interval="5000" data-u-ride="carousel" id="carousel-a935">
-          <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-1">
-            <li data-u-target="#carousel-a935" data-u-slide-to="0" class="u-active u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
-            <li data-u-target="#carousel-a935" data-u-slide-to="1" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
-          </ol>
-          <div class="u-carousel-inner u-gallery-inner" role="listbox">
-            <div class="u-active u-carousel-item u-effect-fade u-gallery-item u-carousel-item-1">
-              <div class="u-back-slide" data-image-width="1280" data-image-height="720">
-                <img class="u-back-image u-expanded u-image-contain" src="https://i.imgur.com/TynHF2G.png">
-              </div>
-              <div class="u-align-center-xs u-over-slide u-shading u-valign-bottom-xs u-over-slide-1">
-                <h3 class="u-gallery-heading">Sample Title</h3>
-                <p class="u-gallery-text">Sample Text</p>
-              </div>
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<div class="carousel-container"> <!-- Container with margin -->
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000"> <!-- Set interval to 5 seconds -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="rounded-card">
+                    <img src="https://i.ytimg.com/vi/6hR6rjxUtSc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAfUlzzoUdP8f7gfCiQ23RbyRGyxw" class="d-block w-100" alt="...">
+                </div>
             </div>
-            <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-2" data-image-width="1280" data-image-height="720">
-              <div class="u-back-slide" data-image-width="1280" data-image-height="720">
-                <img class="u-back-image u-expanded u-image-contain" src="https://i.imgur.com/uFo0tuw.png">
-              </div>
-              <div class="u-align-center-xs u-over-slide u-shading u-valign-bottom-xs u-over-slide-2"></div>
-              <style data-mode="XL" data-visited="true"></style>
-              <style data-mode="LG"></style>
-              <style data-mode="MD"></style>
-              <style data-mode="SM"></style>
-              <style data-mode="XS" data-visited="true"></style>
+            <div class="carousel-item">
+                <div class="rounded-card">
+                    <img src="https://i.ytimg.com/vi/6hR6rjxUtSc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAfUlzzoUdP8f7gfCiQ23RbyRGyxw" class="d-block w-100" alt="...">
+                </div>
             </div>
-          </div>
-          <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-grey-70 u-hidden u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-1" href="#carousel-a935" role="button" data-u-slide="prev">
-            <span aria-hidden="true">
-              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
-c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
-c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
-            </span>
-            <span class="sr-only">
-              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
-c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
-c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
-            </span>
-          </a>
-          <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-grey-70 u-hidden u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-2" href="#carousel-a935" role="button" data-u-slide="next">
-            <span aria-hidden="true">
-              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
-L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
-c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
-            </span>
-            <span class="sr-only">
-              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
-L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
-c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
-            </span>
-          </a>
+            <div class="carousel-item">
+                <div class="rounded-card">
+                    <img src="https://i.ytimg.com/vi/6hR6rjxUtSc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAfUlzzoUdP8f7gfCiQ23RbyRGyxw" class="d-block w-100" alt="...">
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div> <!-- End of container with margin -->
+
+ 
 
     <div class="section custom-section"><!-- Adjust the height percentage as needed -->
       <div class="button-card left-button-card">
@@ -139,16 +156,49 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
   </div>
   
 
-    <div class="card-container">
-      <div class="card" data-image-url="https://i.ytimg.com/vi/zL7r1MXiGU0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB_Sxde3igO2zkbegqANznlZeOEeA">
-          <div class="card-image"></div>
-          <div class="card-content">
-             What is mole ?
-          </div>
-      </div>
- 
-      <!-- Add 8 more cards with the same structure and data-image-url attribute -->
-  </div>
+
+
+  <div class="card-container">
+    <div class="card" data-image-url="https://i.ytimg.com/vi/zL7r1MXiGU0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB_Sxde3igO2zkbegqANznlZeOEeA">
+        <div class="card-image"></div>
+        <div class="card-content">
+            Video Test
+        </div>
+    </div>
+
+    <!-- Add 4 more cards with the same structure and data-image-url attribute -->
+    
+    <div class="card" data-image-url="https://i.ytimg.com/vi/zL7r1MXiGU0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB_Sxde3igO2zkbegqANznlZeOEeA">
+        <div class="card-image"></div>
+        <div class="card-content">
+            Card 1
+        </div>
+    </div>
+
+    <div class="card" data-image-url="https://i.ytimg.com/vi/zL7r1MXiGU0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB_Sxde3igO2zkbegqANznlZeOEeA">
+        <div class="card-image"></div>
+        <div class="card-content">
+            Card 2
+        </div>
+    </div>
+
+    <div class="card" data-image-url="https://i.ytimg.com/vi/zL7r1MXiGU0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB_Sxde3igO2zkbegqANznlZeOEeA">
+        <div class="card-image"></div>
+        <div class="card-content">
+            Card 3
+        </div>
+    </div>
+
+    <div class="card" data-image-url="https://i.ytimg.com/vi/zL7r1MXiGU0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB_Sxde3igO2zkbegqANznlZeOEeA">
+        <div class="card-image"></div>
+        <div class="card-content">
+            Card 4
+        </div>
+    </div>
+</div>
+
+
+
   
   <div class="horizontal-rectangle">
     <button class="rounded-button left-button" onclick="showAnimationAndOpenLink('latest-videos')">Study Tips</button>
@@ -156,16 +206,46 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
 </div>
 
    
-    <div class="card-container">
-      <div class="card" data-image-url="https://i.ytimg.com/vi/zL7r1MXiGU0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB_Sxde3igO2zkbegqANznlZeOEeA">
-          <div class="card-image"></div>
-          <div class="card-content">
-             What is mole ?
-          </div>
+<div class="card-container">
+  <div class="card" data-image-url="https://i.ytimg.com/vi/zL7r1MXiGU0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB_Sxde3igO2zkbegqANznlZeOEeA">
+      <div class="card-image"></div>
+      <div class="card-content">
+          Video Test
       </div>
- 
-      <!-- Add 8 more cards with the same structure and data-image-url attribute -->
   </div>
+
+  <!-- Add 4 more cards with the same structure and data-image-url attribute -->
+  
+  <div class="card" data-image-url="https://i.ytimg.com/vi/zL7r1MXiGU0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB_Sxde3igO2zkbegqANznlZeOEeA">
+      <div class="card-image"></div>
+      <div class="card-content">
+          Card 1
+      </div>
+  </div>
+
+  <div class="card" data-image-url="https://i.ytimg.com/vi/zL7r1MXiGU0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB_Sxde3igO2zkbegqANznlZeOEeA">
+      <div class="card-image"></div>
+      <div class="card-content">
+          Card 2
+      </div>
+  </div>
+
+  <div class="card" data-image-url="https://i.ytimg.com/vi/zL7r1MXiGU0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB_Sxde3igO2zkbegqANznlZeOEeA">
+      <div class="card-image"></div>
+      <div class="card-content">
+          Card 3
+      </div>
+  </div>
+
+  <div class="card" data-image-url="https://i.ytimg.com/vi/zL7r1MXiGU0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB_Sxde3igO2zkbegqANznlZeOEeA">
+      <div class="card-image"></div>
+      <div class="card-content">
+          Card 4
+      </div>
+  </div>
+</div>
+
+
     <section class="u-clearfix u-container-align-center-xs u-section-7" id="carousel_c0df">
       <div class="horizontal-rectangle">
         <button class="rounded-button left-button" onclick="showAnimationAndOpenLink('latest-videos')">Chapter Explainations</button>
@@ -178,12 +258,42 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
         <div class="card" data-image-url="https://i.ytimg.com/vi/zL7r1MXiGU0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB_Sxde3igO2zkbegqANznlZeOEeA">
             <div class="card-image"></div>
             <div class="card-content">
-               What is mole ?
+                Video Test
             </div>
         </div>
-   
-        <!-- Add 8 more cards with the same structure and data-image-url attribute -->
+    
+        <!-- Add 4 more cards with the same structure and data-image-url attribute -->
+        
+        <div class="card" data-image-url="https://i.ytimg.com/vi/zL7r1MXiGU0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB_Sxde3igO2zkbegqANznlZeOEeA">
+            <div class="card-image"></div>
+            <div class="card-content">
+                Card 1
+            </div>
+        </div>
+    
+        <div class="card" data-image-url="https://i.ytimg.com/vi/zL7r1MXiGU0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB_Sxde3igO2zkbegqANznlZeOEeA">
+            <div class="card-image"></div>
+            <div class="card-content">
+                Card 2
+            </div>
+        </div>
+    
+        <div class="card" data-image-url="https://i.ytimg.com/vi/zL7r1MXiGU0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB_Sxde3igO2zkbegqANznlZeOEeA">
+            <div class="card-image"></div>
+            <div class="card-content">
+                Card 3
+            </div>
+        </div>
+    
+        <div class="card" data-image-url="https://i.ytimg.com/vi/zL7r1MXiGU0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB_Sxde3igO2zkbegqANznlZeOEeA">
+            <div class="card-image"></div>
+            <div class="card-content">
+                Card 4
+            </div>
+        </div>
     </div>
+    
+    
 
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-a8e6"><div class="u-clearfix u-sheet u-sheet-1">
         <p class="u-small-text u-text u-text-variant u-text-1">Sample text. Click to select the Text Element.</p>
