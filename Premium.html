@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic is Coming</title>
+    <style>
+body {
+    margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+	background: linear-gradient(-45deg, #3700ff, #2a04ff, #ffffff, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+	height: 100vh;
+}
+
+#magic-container {
+    
+            text-align: center;
+            font-size: 48px;
+            font-weight: bold;
+            color: transparent;
+            display: inline-block;
+            text-fill-color: transparent;
+            background: linear-gradient(90deg, #ffffff, #ffffff, #ffffff);
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        #is-coming {
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            display: inline-block;
+        }
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="d-flex flex-column justify-content-center w-100 h-100">
+        <div id="magic-container">
+            <div id="magic">MAGIC</div>
+            <span id="is-coming">IS COMING SOON</span>
+        </div>
+    </div>
+
+
+</body>
+</html>
