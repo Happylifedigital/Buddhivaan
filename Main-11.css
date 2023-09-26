@@ -67,14 +67,14 @@ body {
   
   
   .left-button-card {
-    background: linear-gradient(to bottom, #0078d4, #011968);
+    background: linear-gradient(to right, #00c6ff, #0072ff);
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     margin-right: 20px;
     margin-left: 20px;
   }
   
   .right-button-card {
-    background: linear-gradient(to top, #fa0000, #ffae00);
+    background: linear-gradient(to right, #ff6a00, #ee0979);
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     margin-left: 20px; 
     margin-right: 20px;
