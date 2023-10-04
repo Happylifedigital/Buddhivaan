@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lottie Animation Loop</title>
+</head>
+<body>
+    <div id="lottie-animation"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+    <script>
+        // Replace the URL below with your Lottie animation JSON URL
+        var animationData = "https://lottie.host/?file=b4383a73-b469-4f5c-b13f-97eae640ca85/xtYCaxG3KB.json";
+
+        // Create a Lottie player
+        var animation = lottie.loadAnimation({
+            container: document.getElementById('lottie-animation'),
+            renderer: 'svg', // Use SVG for rendering (you can also use 'canvas')
+            loop: true, // Play animation in a loop
+            autoplay: true, // Start animation automatically
+            path: animationData // URL to your Lottie animation JSON
+        });
+    </script>
+</body>
+</html>
