@@ -1,0 +1,5 @@
+When app opens
+it asks for user id and  password
+when user enters the user id and the tag is present in firebase for user id , then the id gets stored in id label, which then on successful password verification 
+store the id in tiny db id tag...
+
