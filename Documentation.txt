@@ -12,9 +12,15 @@ class's teachers list: (class_id_teachers:[no. of characters of 1st_teacher_id]_
 each teacher's assignment data: teacherid_assignment:[number of assignments]_assignment1name_assignment1link_assignment1submissiondate_...upto that number of assignments
 
 First student login
-- if on first login the student tiny db data with tag datalog is not yes then it will get its complete data from firebase about class teacher etc
-- first it sets project bucket to Users and calleds student_id:class:id to get class id 
-and then it stores class id in class_id tiny db
-then it sets project bucket to class
-and asks for teachers list
+-
+
+The Firebase teacher count asks for number of teachers
+stores that number in classid_teachers_count in tinydb
+
+then firebase ask_teacher_list asks for first teacher data
+and teachers_list_updated gets and stores data using recursive function within 
+tinydb tag classid_teachers_0[count eg:1,2,3....]
+
+at last when last teachers data is received: it will ask for schoolname for update purpose which contains unique school id
+
 
