@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Header</title>
+    <link rel="stylesheet" type="text/css" href="8th_games_style.CSS">
+    <script src="8th_games_script.js"></script>
+
+</head>
+
+<style>
+.gradient-box {
+    width: 90%;
+    height: 50px;
+    background: linear-gradient(to bottom, #8B008B, #0000FF);
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto; /* Center the box horizontally with 10px margin on top and bottom */
+}
+
+.white-text {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+</style>
+
+<body>
+    <header>
+        <h1 id="headerText">Buddhivaan Games</h1>
+    </header>
+    <div class="gradient-box">
+        <p class="white-text">Chapter 1 </p>
+    </div>
+    <div class="card-container">
+        <!-- First Card -->
+        <div class="md-card">
+            <a class="no-underline" href="https://example.com">
+                <div class="md-card-header">
+                    <img src="https://7071.play.gamezop.com/_next/image?url=https%3A%2F%2Fstatic.gamezop.com%2FSy8y2aQ9CB%2Fm%2Fsquare.png&w=828&q=100" alt="Card Image">
+                </div>
+                <div class="md-card-content">
+                    <h2 class="md-card-title">Quiz Champions</h2>
+                    <p class="md-card-description">Test Your General Knowledge with Quiz.</p>
+                </div>
+            </a>
+        </div>
+        
+        <!-- Second Card -->
+        <div class="md-card">
+            <a class="no-underline" href="https://example.com">
+                <div class="md-card-header">
+                    <img src="https://picsum.photos/536/354" alt="Card Image">
+                </div>
+                <div class="md-card-content">
+                    <h2 class="md-card-title">Card Title 2</h2>
+                    <p class="md-card-description">This is another Material Design card. You can add content here.</p>
+                </div>
+            </a>
+        </div>
+        
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
