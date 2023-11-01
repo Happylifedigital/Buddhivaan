@@ -7,12 +7,18 @@ I also created another back end app where we can check for available school ids,
 
 
 Whenever i register a student i want following data with mentioned purpose:
-student's class: every students class must be specified as (student_id:class_id) 
-class's teachers list: (class_id_teachers:[no. of characters of 1st_teacher_id]_1st_teacherid_....upto all teachers
-each teacher's assignment data: teacherid_assignment:[number of assignments]_assignment1name_assignment1link_assignment1submissiondate_...upto that number of assignments
+student's id password: as (student_id: student_password)
+student's class: every students class must be specified as (student_id_class:class_id) 
 
 First student login
 -
+1) the tinydb stores username in username tag
+2) firebase requests username_class
+3) it stores username_class in username_class tinydb
+4) firebase requests class_teachercount for number of teachers
+5) it stores teacher_count in class_teachercount tinydb and also to variable i
+6) firebase requests class_teacher_1 for first teacher id 
+7) Once firebase receives first teacher id, i-1 takes place, id is stored in classid_teacher_1
 
 The Firebase teacher count asks for number of teachers
 stores that number in classid_teachers_count in tinydb
