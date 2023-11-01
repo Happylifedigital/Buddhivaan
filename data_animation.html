@@ -10,11 +10,33 @@
         #lottie-animation {
             width: 100vw;
             height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
+        body, html {
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        #animation-text {
+        font-size: 24px;
+        font-weight: bold;
+        
+        position: absolute;
+        bottom: 100px; /* Adjust as needed */
+        width: 100%;
+        background: linear-gradient(90deg, blue, purple);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent; /* Hides the original text color */
+        text-align: center; /* Center align the text horizontally */
+    }
     </style>
 </head>
 <body>
     <div id="lottie-animation"></div>
+    <div id="animation-text">Preparing Buddhivaan Experience</div>
 
     <script>
         // Create a variable to reference the Lottie animation container
