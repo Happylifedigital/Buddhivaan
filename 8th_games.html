@@ -10,6 +10,112 @@
 </head>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Your+Cool+Font');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* Set a background color for the body */
+}
+
+header {
+    /* Purple to Blue gradient */
+    color: #fff; /* Text color for the header */
+    text-align: center;
+    padding: 0px;
+}
+
+#headerText {
+  background: linear-gradient(to right, #800080, #0000FF); 
+    font-weight: bold;
+    font-size: 36px;
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family:sans-serif; 
+}
+
+
+
+/* Add gaming-inspired hover animation for .md-card */
+.card-container {
+    display: flex;
+    justify-content: space-around; /* Adjust this as needed */
+    flex-wrap: wrap; /* Allow wrapping if there are many cards */
+}
+
+.md-card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 8px;
+    background-color: #fff;
+    max-width: 200px;
+    font-family: sans-serif;
+    position: relative; /* Needed for absolute positioning of the overlay */
+    transition: transform 0.2s; /* Smooth scaling transition */
+    flex: 1; /* Distribute cards evenly in the flex container */
+}
+
+.md-card a {
+    text-decoration: none; /* Remove the default underline */
+    transition: transform 0.3s; /* Add a transition for the transform property */
+}
+
+.md-card a.hover-animation {
+    transform: scale(1.1); /* Apply the scaling effect when the class is added */
+}
+
+.md-card:hover {
+    transform: scale(1.05); /* Scale up the card on hover */
+}
+
+.md-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(188, 0, 235, 0), rgba(3, 7, 255, 0.315)); /* Overlay with gradient for a gaming effect */
+    opacity: 0;
+    transition: opacity 0.2s; /* Fade in effect */
+}
+
+.md-card:hover:before {
+    opacity: 1; /* Make the overlay visible on hover */
+}
+
+.md-card-header img {
+    width: 100%;
+    height: auto;
+}
+
+.md-card-content {
+    padding: 16px;
+}
+
+.md-card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.md-card-description {
+    font-family: 'Your Cool Font', sans-serif;
+    font-size: 14px;
+    margin: 0;
+}
+
+.no-underline {
+    text-decoration: none; /* Remove underline */
+    color: inherit;  /* Add any other styles you want for the links */
+}
+
+
+
+
 .gradient-box {
     width: 90%;
     height: 50px;
@@ -96,6 +202,20 @@
 
      
 
-    <script src="script.js"></script>
+    <script> document.addEventListener("DOMContentLoaded", function() {
+        const cards = document.querySelectorAll(".md-card");
+    
+        cards.forEach(function(card) {
+            card.addEventListener("click", function() {
+                const link = card.querySelector("a");
+                if (link) {
+                    window.location.href = link.getAttribute("href");
+                }
+            });
+        });
+    });
+    
+    
+    </script>
 </body>
 </html>
