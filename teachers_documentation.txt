@@ -16,9 +16,30 @@ Teachers Data in tinydb tags:
 - it is requested using username_name in firebase,  bucket Userdata
 
 4) asscount:
-- it contains the number of assignments 
-- it is stored after getting class id from username_class
-- it is requested using classid_subjectcount ,  bucket Classes
+- it contains the number of assignment ids, which is number of classes and subjects it manages
+- it is stored after getting name of teacher
+- it is requested using *username_asscount ,  bucket UserData
+
+5) assid_*asscount, assid_*asscount-1, assid_*asscount-2 ....:
+- it contains the assignment id's from last to 1st 
+- it is stored after getting assignment count
+- it is requested using *username_assid_*asscount
+
+6) class8teacher, class9teacher, class10teacher:
+- it contains links for teacher homepage, where they can choose notes, videos, studytips and quests both for assignment and study material
+- it is stored after getting all assignment ids...
+
+7) *username_classcount:
+- it contains number of classes of that teacher
+- it is stored after storing all teacher homepage urls
+- it is requested using *username_asscount
+
+8) *username_class_*classcount:
+- it contains the class name for each class count like 8th a, 9th b , 10th c
+
+
+- it is stored after after getting classcount 
+- it is requested using *username_class_1 in Fdb3 (Teachers bucket)
 
 
 Creating a new user:
