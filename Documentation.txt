@@ -57,31 +57,110 @@ Creating a new user:
 3) store username_class:schoolid@classth@division
 4) store *classid_subjectcount:*count
 
-Firebase assignments data:
+Firebase assignments data: bucket Assignments
 
 1) *classid_subject_*subjectcount_ac: *count = counts number of assignments in that class's subject
 2) classid_subject_*subjectcount_a_*ac: *Subject Name = Contains name of the subject
+3) classid_subject_*subjectcount_a_*ac_desc: *description = contains description of assignments by teacher
+4) call Fdb3 classid_subject_*subjectcount_a_*ac_until: *date = Contains deadline date of assignment
+5) call Fdb3 classid_subject_*subjectcount_a_*ac_type
+6) call Fdb3 classid_subject_*subjectcount_a_*ac_url
+7) call Fdb3 classid_subject_*subjectcount_a_*ac_tname
 
 Requesting assignments on student page initialize:
 1) Call Fdb2 for *classid_subject_*subjectcount_ac (bucket Assignments) ()
 2) Fdb2:
 
 If #subjectcount != 0, (initialized from classid_subjectcount), 
-then 
-if getvalue != no value
-      set #subjectcount to #subjectcount -1 
-      and 
-      call Fdb2 *classid_subject_*subjectcount_ac
-else if if getvalue != 0
-      set #subjectcount to #subjectcount -1 
-      and 
-      call Fdb2 *classid_subject_*subjectcount_ac
-else 
-    set #acdone= 1
-    #ac= getvalue
-    and 
-    call Fdb3 classid_subject_*subjectcount_a_*ac
-    and
-    set fbstore=name
+      then 
+      if getvalue != no value
+          set #subjectcount to #subjectcount -1 
+          and 
+          call Fdb2 *classid_subject_*subjectcount_ac
+      else if if getvalue != 0
+          set #subjectcount to #subjectcount -1 
+          and 
+          call Fdb2 *classid_subject_*subjectcount_ac
+      else 
+            set #acdone= 1
+            #ac= getvalue
+            and 
+            call Fdb3 classid_subject_*subjectcount_a_*ac
+            and
+            set #fb_store=name
 
 3) Fdb3:
+If #subjectcount !=0 
+-------if #fb_store=name
+             set #activ_ass= #activ_ass+1 (initially 0)
+              if #activ_ass==1
+                  ass1card=visible 
+                  ass1name=getvalue
+              if #activ_ass==2
+                  ass2card=visible 
+                  ass2name=getvalue
+.
+.
+.
+..
+            if #activ_ass==6
+                ass1card=visible 
+                ass1name=getvalue
+      then
+         
+      call Fdb3 classid_subject_*subjectcount_a_*ac_desc
+      and
+      set #fb_store=desc
+
+-----else if #fb_store=desc
+              if #activ_ass==1
+                  ass1desc=getvalue
+              if #activ_ass==2
+                  ass2desc=getvalue 
+.
+.
+.
+..
+            if #activ_ass==6
+                  ass2desc=getvalue 
+      then
+         
+      call Fdb3 classid_subject_*subjectcount_a_*ac_until
+      and
+      set #fb_store=desc 
+.
+.
+.
+.
+.
+       call Fdb3 classid_subject_*subjectcount_a_*ac_type
+      and
+      set #fb_store=type
+.
+.
+.
+.
+.
+       call Fdb3 classid_subject_*subjectcount_a_*ac_url
+      and
+      set #fb_store=url
+.
+.
+.
+.
+       call Fdb3 classid_subject_*subjectcount_a_*ac_tname
+      and
+      set #fb_store=tname
+.
+.
+.
+.
+      set #ac=#ac-1
+      if #ac!=0 
+           set #fb_store=name
+           call Fdb3 classid_subject_*subjectcount_a_*ac
+      else
+           set #subject_count=#subject_count -1
+           call Fdb2 *classid_subject_*subjectcount_ac (bucket Assignments)
+                 
+           
