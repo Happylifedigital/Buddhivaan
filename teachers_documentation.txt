@@ -1,0 +1,28 @@
+
+Teachers Data in tinydb tags:
+1) username: 
+- contains the username of teacher in format id@school_id
+- it is stored when login is success along with correct password
+- it is requested using searching for username tag in firebase which contains password as its value , bucket Userdata
+
+2) usertype:
+- it contains the verification that given user is a teacher
+- it is stored after username and only stored if given value is "teacher"
+- it is requested using username_usertype in firebase,  bucket Userdata
+
+3) name: 
+- here the name of teacher is stored in his name
+- it is stored after checking that given user is a teacher
+- it is requested using username_name in firebase,  bucket Userdata
+
+4) asscount:
+- it contains the number of assignments 
+- it is stored after getting class id from username_class
+- it is requested using classid_subjectcount ,  bucket Classes
+
+
+Creating a new user:
+1) store userid@schoolid:password as key value
+2) store username_usertype:student as key value
+3) store username_class:schoolid@classth@division
+4) store *classid_subjectcount:*count
