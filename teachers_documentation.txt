@@ -19,7 +19,7 @@ Teachers Data in tinydb tags:
 - it contains the number of assignment ids, which is number of classes and subjects it manages
 - it is stored after getting name of teacher
 - it is requested using *username_asscount ,  bucket UserData
-
+ 
 5) assid_*asscount, assid_*asscount-1, assid_*asscount-2 ....:
 - it contains the assignment id's from last to 1st 
 - it is stored after getting assignment count
@@ -36,8 +36,6 @@ Teachers Data in tinydb tags:
 
 8) *username_class_*classcount:
 - it contains the class name for each class count like 8th a, 9th b , 10th c
-
-
 - it is stored after after getting classcount 
 - it is requested using *username_class_1 in Fdb3 (Teachers bucket)
 
