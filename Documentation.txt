@@ -29,4 +29,59 @@ tinydb tag classid_teachers_0[count eg:1,2,3....]
 
 at last when last teachers data is received: it will ask for schoolname for update purpose which contains unique school id
 
+Student Data in tinydb tags:
+1) username: 
+- contains the username of student in format id@school_id
+- it is stored when login is success along with correct password
+- it is requested using searching for username tag in firebase which contains password as its value , bucket Userdata
 
+2) usertype:
+- it contains the verification that given user is a student 
+- it is stored after username and only stored if given value is "student"
+- it is requested using username_usertype in firebase,  bucket Userdata
+
+3) username_class:
+- here the class id of the student is stored in his unique username_class
+- it is stored after checking that given user is a student 
+- it is requested using username_class in firebase,  bucket Userdata
+
+4) classid_subjectcount:
+- it contains the number of subjects for that class 
+- it is stored after getting class id from username_class
+- it is requested using classid_subjectcount ,  bucket Classes
+
+
+Creating a new user:
+1) store userid@schoolid:password as key value
+2) store username_usertype:student as key value
+3) store username_class:schoolid@classth@division
+4) store *classid_subjectcount:*count
+
+Firebase assignments data:
+
+1) *classid_subject_*subjectcount_ac: *count = counts number of assignments in that class's subject
+2) classid_subject_*subjectcount_a_*ac: *Subject Name = Contains name of the subject
+
+Requesting assignments on student page initialize:
+1) Call Fdb2 for *classid_subject_*subjectcount_ac (bucket Assignments) ()
+2) Fdb2:
+
+If #subjectcount != 0, (initialized from classid_subjectcount), 
+then 
+if getvalue != no value
+      set #subjectcount to #subjectcount -1 
+      and 
+      call Fdb2 *classid_subject_*subjectcount_ac
+else if if getvalue != 0
+      set #subjectcount to #subjectcount -1 
+      and 
+      call Fdb2 *classid_subject_*subjectcount_ac
+else 
+    set #acdone= 1
+    #ac= getvalue
+    and 
+    call Fdb3 classid_subject_*subjectcount_a_*ac
+    and
+    set fbstore=name
+
+3) Fdb3:
