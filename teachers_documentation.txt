@@ -45,3 +45,10 @@ Creating a new user:
 2) store username_usertype:student as key value
 3) store username_class:schoolid@classth@division
 4) store *classid_subjectcount:*count
+
+
+English-1
+Hindi-2
+Maths-3
+Science-4
+Social Science-5
