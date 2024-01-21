@@ -39,6 +39,8 @@ https://buddhivaan.com/app/class_8th/exam/8th_exam_sst_history.html
 
 GRAPHICS:
 
+SCIENCE: https://buddhivaan.com/app/graphics/SCIENCE.png
+
 BIOLOGY: https://buddhivaan.com/app/graphics/BIOLOGY.png
 
 PHYSICS: https://buddhivaan.com/app/graphics/PHYSICS.png
@@ -55,4 +57,8 @@ CIVICS: https://buddhivaan.com/app/graphics/POLITICS.png
 
 GEOGRAPHY: https://buddhivaan.com/app/graphics/GEOGRAPHY.png
 
+COVER: https://buddhivaan.com/app/graphics/COVER.png
 
+8TH EXAM PANEL: https://buddhivaan.com/app/class_8th/exam/exam_panel.html
+9TH EXAM PANEL: https://buddhivaan.com/app/class_9th/exam/exam_panel.html
+10TH EXAM PANEL: https://buddhivaan.com/app/class_10th/exam/exam_panel.html
