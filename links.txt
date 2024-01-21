@@ -1,8 +1,8 @@
 Class 8th:
 
-main:https://buddhivaan.com/app/class_8th/Home/main_8.html
+main: https://buddhivaan.com/app/class_8th/Home/main_8.html
 Qna : https://buddhivaannotesclass8cbse.blogspot.com/p/choose-your-chapter.html
-Videos: https://budhivaanclass8thvideos.blogspot.com/
+Videos: https://budhivaanclass8thvideos.blogspot.com
 Games: https://buddhivaan.com/app/class_8th/8th_games.html
 Study Tips:  https://budhivaanclass8thvideos.blogspot.com/search?q=study+tips
 
@@ -10,14 +10,14 @@ Study Tips:  https://budhivaanclass8thvideos.blogspot.com/search?q=study+tips
 
 main: https://buddhivaan.com/app/class_9th/home/main_9.html
 Qna : https://buddhivaannotesclass9cbse.blogspot.com/p/choose-your-chapter.html
-Videos: https://budhivaanclass9thvideos.blogspot.com/
+Videos: https://budhivaanclass9thvideos.blogspot.com
 Games: https://buddhivaan.com/app/class_9th/9th_games.html
 Study Tips: https://budhivaanclass9thvideos.blogspot.com/search?q=study
 
   Class 10th:
 
-main:
+main: 
 Qna : https://buddhivaannotesclass10cbse.blogspot.com/p/choose-your-chapter.html
-Videos: https://budhivaanclass10thvideos.blogspot.com/
+Videos: https://budhivaanclass10thvideos.blogspot.com
 Games: https://buddhivaan.com/app/class_10th/10th_games.html
 Study Tips: https://budhivaanclass10thvideos.blogspot.com/search?q=study+tips
